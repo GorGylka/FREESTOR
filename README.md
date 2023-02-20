@@ -1,5 +1,6 @@
 # FREESTOR
 This app allows download and install PSP .pkg directly via WiFi, without PC. 
+
 To install FREESTOR:
 ___________________________
 -copy all files from (releases) to root of your memory card ms0:/
