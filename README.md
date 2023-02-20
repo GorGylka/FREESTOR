@@ -5,7 +5,7 @@ To install FREESTOR:
 ___________________________
 -copy all files from (releases) to root of your memory card ms0:/
 
--install Npdrm_free plugin on your PSP (https://github.com/qwikrazor87/npdrm_free)
+-install Npdrm_free plugin on your PSP (https://github.com/lusid1/npdrm_free_mod)
 
 -to prevent shutdown during download process, disable Auto Sleep (PSP Settings -> Power Save Settings -> Auto Sleep -> off)
 ___________________________
@@ -20,7 +20,5 @@ Limitations:
 -Maximum download speed is about 200-300kb/s due to outdated Wifi module. Make sure that you have enough time to wait :). downloading and installing a 500MB game takes approximately 1 hour
 
 -PSP Street not supported at all
-
--Memory card must support MagicGate
 ___________________________
 Tested on PSP 3000 6.61 PROMOD-C2p∞
