@@ -20,5 +20,7 @@ Limitations:
 -Maximum download speed is about 200-300kb/s due to outdated Wifi module. Make sure that you have enough time to wait :). downloading and installing a 500MB game takes approximately 1 hour
 
 -PSP Street not supported at all
+
+-Memory card must support MagicGate
 ___________________________
 Tested on PSP 3000 6.61 PROMOD-C2p∞
