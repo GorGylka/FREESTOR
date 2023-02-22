@@ -36,9 +36,10 @@ PSP_MODULE_INFO("cURL Test", 0, 1, 1);
 
 int temp1 = 0;
 int triangle_pressed = 0;
+int square_pressed = 0;
 
 
-const char* Choose_database = "important_files/All_games_sort_by_Name.tsv";
+const char* Choose_database = "important_files/All_games_sort_by_Size.tsv";
 
 
 
@@ -53,6 +54,10 @@ void drawUI()
       pspDebugScreenPrintf("UP,DOWN=select game  X=install game TRNGL=sort games");
       pspDebugScreenSetXY(0,33);
       pspDebugScreenPrintf("L,R=page next/previous []=credits"); 
+      pspDebugScreenSetTextColor(0xFFFFFF);
+      pspDebugScreenSetXY(63,33);
+      pspDebugScreenPrintf("/1599"); 
+      pspDebugScreenSetTextColor(0x00DDDD);
       pspDebugScreenPutChar(0,8,0xFFFFFF, '>');
       pspDebugScreenPutChar(0,16,0xFFFFFF, '>');
       pspDebugScreenPutChar(0,24,0xFFFFFF, '>');
@@ -194,7 +199,7 @@ int main_thread(SceSize args, void *argp)
 
 	// Download the file
 	pspDebugScreenPrintf("\nDownloading...\n");
-	curlDownload(url) < 0 ? pspDebugScreenPrintf("Failed!\n") : pspDebugScreenPrintf("Success!\n");
+	curlDownload(url) < 0 ? pspDebugScreenPrintf("Failed!\n") : pspDebugScreenPrintf("\n Success!\n");
 
 	return 0;
 }
@@ -231,7 +236,10 @@ void curl_main()
 	close();
 
 	printf("Press X to exit\n");
-	pspDebugScreenPrintf("Press X to exit");
+      pspDebugScreenSetTextColor(0x33FF33);
+	pspDebugScreenPrintf("DOWNLOAD COMPLETE! NOW LAUNCH GAME_INSTALLER TO INSTALL THE GAME\n");
+      pspDebugScreenSetTextColor(0xFFFFFF);
+      pspDebugScreenPrintf("Press X to exit\n");
 	while (1)
 	{
 		SceCtrlData pad;
@@ -280,7 +288,7 @@ auto main() -> int
       
       
       const int number_of_games = 2243;
-      int gamecounter = 0;
+      int gamecounter = 1;
       std::string tempstr;
       int i;
       std::string str;
@@ -295,7 +303,7 @@ auto main() -> int
       choosegame = choosegame + 8;
       }
       */
-      int choosegame = 0;
+      int choosegame = 8;
       //pspDebugScreenPutChar(0,choosegame,0x0000FF, '>');
       drawTable();
       drawUI();
@@ -323,13 +331,14 @@ auto main() -> int
                   pspDebugScreenPutChar(417,choosegame,0x0000FF, '>');
                   gamecounter = gamecounter + 1;
                   
+                  
 
                   std::stringstream ss;
                   ss << gamecounter;
                   std::string tempstr = ss.str();
-                  pspDebugScreenSetXY(60,33); 
+                  pspDebugScreenSetXY(59,33); 
                   pspDebugScreenPrintf("    ");
-                  pspDebugScreenSetXY(60,33);
+                  pspDebugScreenSetXY(59,33);
                   pspDebugScreenPrintf(tempstr.c_str());
                   
                   } 
@@ -347,6 +356,7 @@ auto main() -> int
                   pspDebugScreenPutChar(0,choosegame,0xFFFFFF, '>');
                   pspDebugScreenPutChar(306,choosegame,0x000000, '>');
                   pspDebugScreenPutChar(417,choosegame,0x000000, '>');
+                  
                   choosegame = choosegame - 8;
                   pspDebugScreenPutChar(0,choosegame,0x0000FF, '>');
                   pspDebugScreenPutChar(306,choosegame,0x0000FF, '>');
@@ -355,9 +365,9 @@ auto main() -> int
                   std::stringstream ss;
                   ss << gamecounter;
                   std::string tempstr = ss.str();
-                  pspDebugScreenSetXY(60,33); 
+                  pspDebugScreenSetXY(59,33); 
                   pspDebugScreenPrintf("    ");
-                  pspDebugScreenSetXY(60,33);
+                  pspDebugScreenSetXY(59,33);
                   pspDebugScreenPrintf(tempstr.c_str());
                   }
 		}
@@ -372,7 +382,7 @@ auto main() -> int
             
             
             if (latchData.uiMake & PSP_CTRL_RTRIGGER){
-            if (triangle_pressed == 0) {
+            if (triangle_pressed == 0 && square_pressed == 0) {
             if (gamecounter < 1590) {
             pspDebugScreenInit();
             
@@ -382,9 +392,9 @@ auto main() -> int
             std::stringstream ss;
             ss << gamecounter;
             std::string tempstr = ss.str();
-            pspDebugScreenSetXY(60,33); 
+            pspDebugScreenSetXY(59,33); 
             pspDebugScreenPrintf("    ");
-            pspDebugScreenSetXY(60,33);
+            pspDebugScreenSetXY(59,33);
             pspDebugScreenPrintf(tempstr.c_str());
             pspDebugScreenSetXY(0,1);
             drawTable();
@@ -405,7 +415,7 @@ auto main() -> int
             
             
             if (latchData.uiMake & PSP_CTRL_LTRIGGER){
-            if (triangle_pressed == 0) {
+            if (triangle_pressed == 0 && square_pressed == 0) {
             if (gamecounter > 30) {
             
             pspDebugScreenInit();
@@ -416,9 +426,9 @@ auto main() -> int
             std::stringstream ss;
             ss << gamecounter;
             std::string tempstr = ss.str();
-            pspDebugScreenSetXY(60,33); 
+            pspDebugScreenSetXY(59,33); 
             pspDebugScreenPrintf("    ");
-            pspDebugScreenSetXY(60,33);
+            pspDebugScreenSetXY(59,33);
             pspDebugScreenPrintf(tempstr.c_str());
             pspDebugScreenSetXY(0,1);
             drawTable();
@@ -439,7 +449,7 @@ auto main() -> int
 
 
             if (latchData.uiMake & PSP_CTRL_CROSS)   {
-            if (triangle_pressed == 0) {
+            if (triangle_pressed == 0 && square_pressed == 0) {
             temp1 = gamecounter;
             pspDebugScreenInit();
             std::ifstream file2(Choose_database);
@@ -454,7 +464,7 @@ auto main() -> int
 
             file2.close();
             //std::ofstream file("test.txt");
-            std::ofstream file("ms0:/PSP/GAME/FREESTOR/url.txt");
+            std::ofstream file("ms0:/PSP/GAME/FREESHOP/url.txt");
             file << (str);
             file << (".pkg");
             file.close();
@@ -503,7 +513,7 @@ auto main() -> int
 
 
             if (latchData.uiMake & PSP_CTRL_START)   {
-            if (triangle_pressed == 1) {
+            if (triangle_pressed == 1 || square_pressed == 1) {
 
             if (gamecounter < 12 && gamecounter > 0) {
                   if (gamecounter == 1) Choose_database = "important_files/All_games_sort_by_Name.tsv";
@@ -517,19 +527,37 @@ auto main() -> int
                   if (gamecounter == 9) Choose_database = "important_files/Minis_only_sort_by_Name.tsv";
                   if (gamecounter == 10) Choose_database = "important_files/Minis_only_sort_by_Size.tsv";
                   if (gamecounter == 11) Choose_database = "important_files/Mics_PCE_NeoGeo.tsv";
+                  
+                  
+                  }
                   pspDebugScreenInit();
                   triangle_pressed = 0;
+                  square_pressed = 0;
                   choosegame = 0;
                   gamecounter =0;
                   temp1 = 0;
                   drawTable();
                   drawUI();
-                  
-                  }
             }
 
 
 
+            }
+
+            if (latchData.uiMake & PSP_CTRL_SQUARE)   
+            {
+            square_pressed = 1;
+            choosegame = 0;
+            gamecounter =0;
+            pspDebugScreenInit();
+            //drawUI();
+            pspDebugScreenSetTextColor(0x33FF33);
+            pspDebugScreenSetXY(0,0);
+            pspDebugScreenPrintf(" FREESTOR v0.0002\n");
+            pspDebugScreenPrintf(" made by GorGylka, huge thanks to XProger\n");
+            pspDebugScreenSetXY(20,28);
+            pspDebugScreenPrintf("Press (START) to main menu");
+            pspDebugScreenSetTextColor(0xFFFFFF);
             }
 
 

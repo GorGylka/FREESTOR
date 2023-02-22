@@ -34,11 +34,11 @@ const char* str = ssss.str().c_str();
 pspDebugScreenSetXY(34,15);
 pspDebugScreenPrintf(str);
 pspDebugScreenPutChar(252,120,0xFFFFFF, '%');
-
-percent = (percent + 190);
+percent = ( NowDownloaded / TotalToDownload * 400);
+percent = (percent + 40);
 pspDebugScreenPutChar(percent,100,0x4444FF, '>');
-pspDebugScreenPutChar(184,100,0xFFFFFF, '[');
-pspDebugScreenPutChar(296,100,0xFFFFFF, ']');
+pspDebugScreenPutChar(34,100,0xFFFFFF, '[');
+pspDebugScreenPutChar(446,100,0xFFFFFF, ']');
 return 0;
 }
 
