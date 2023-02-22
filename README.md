@@ -1,4 +1,7 @@
-# FREESTOR
+# FREESTOR 
+
+![img_downloads]
+
 This app allows download and install PSP .pkg directly via WiFi, without PC. 
 
 To install FREESTOR:
@@ -20,5 +23,9 @@ Limitations:
 -Maximum download speed is about 200-300kb/s due to outdated Wifi module. Downloading and installing a 500MB game takes approximately 1 hour
 
 -PSP Street not supported at all
+
+-Not tested yet on a PSP Go 
 ___________________________
 Tested on PSP 3000 6.61 PROMOD-C2p∞
+
+[img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
