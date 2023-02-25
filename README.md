@@ -26,6 +26,17 @@ Limitations:
 
 -Not tested yet on a PSP Go 
 ___________________________
+TO DO List:
+
+-wrap two apps into one
+
+-increase download speed from 250 to 500 kb/s
+
+-add ps1 library
+
+-Replace one of the system apps (such as Digital Comics) with a Freeshop app
+___________________________
 Tested on PSP 3000 6.61 PROMOD-C2p∞
+
 
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
