@@ -36,7 +36,7 @@ TO DO List:
 
 -Replace one of the system apps (such as Digital Comics) with a Freeshop app
 ___________________________
-Tested on PSP 3000 6.61 PROMOD-C2p∞
+Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
 
 
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
