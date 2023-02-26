@@ -1,6 +1,6 @@
 # FREESTOR 
 
-![img_downloads]
+![img_downloads] ![img_stars]
 
 This app allows download and install PSP .pkg directly via WiFi, without PC. 
 
@@ -40,3 +40,4 @@ Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
 
 
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
+[img_stars]: https://img.shields.io/github/stars/gorgylka/freestor?color=red&style=for-the-badge&maxAge=3600
