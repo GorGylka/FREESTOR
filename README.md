@@ -32,7 +32,7 @@ TO DO List:
 
 -increase download speed from 250 to 500 kb/s
 
--add ps1 library
+-a̶d̶d̶ ̶p̶s̶1̶ ̶l̶i̶b̶r̶a̶r̶y̶  (Done)
 
 -Replace one of the system apps (such as Digital Comics) with a Freeshop app
 ___________________________
