@@ -9,7 +9,7 @@
 
 This app allows download and install PSP .pkg directly via WiFi, without PC. 
 
-To install FREESTOR:
+# To install FREESTOR:
 ___________________________
 -copy all files from (releases) to root of your memory card ms0:/
 
@@ -17,11 +17,11 @@ ___________________________
 
 -to prevent shutdown during download process, disable Auto Sleep (PSP Settings -> Power Save Settings -> Auto Sleep -> off)
 ___________________________
-How to use:
+# How to use:
 
 Run [FREESTOR] to choose and download Game, Then run [Game Install] to install downloaded game. That's it.
 ___________________________
-Limitations:
+# Limitations:
 
 -PSP Wifi Does not support new Encryption Standarts, so to use it, change Wifi encryption from WPA2-PSK to WPA-PSK , WEP or just disable password in your wifi router settings
 
@@ -31,17 +31,21 @@ Limitations:
 
 -Not tested yet on a PSP Go 
 ___________________________
-TO DO List:
+# TO DO List:
 
 -wrap two apps into one
 
--increase download speed from 250 to 500 kb/s
+-increase download speed from 250 to 500 kb/s (almost done)
 
 -a̶d̶d̶ ̶p̶s̶1̶ ̶l̶i̶b̶r̶a̶r̶y̶  (Done)
 
 -Replace one of the system apps (such as Digital Comics) with a Freeshop app
 ___________________________
 Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
+
+# Support the project with a donation 🤏
+
+USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921 Master Card 5374-9211-6237-9790
 
 
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
