@@ -25,7 +25,7 @@ ___________________________
 
 -PSP Wifi Does not support new Encryption Standarts, so to use it, change Wifi encryption from WPA2-PSK to WPA-PSK , WEP or just disable password in your wifi router settings
 
--Maximum download speed is about 200-300kb/s due to outdated Wifi module. Downloading and installing a 500MB game takes approximately 1 hour
+-Maximum download speed is about ̶2̶0̶0̶-̶3̶0̶0̶k̶b̶/̶s̶  450-600kb/s due to outdated Wifi module. Downloading and installing a 500MB game takes approximately 35 minutes
 
 -PSP Street not supported at all
 
@@ -35,7 +35,7 @@ ___________________________
 
 -wrap two apps into one
 
--increase download speed from 250 to 500 kb/s (almost done)
+-i̶n̶c̶r̶e̶a̶s̶e̶ ̶d̶o̶w̶n̶l̶o̶a̶d̶ ̶s̶p̶e̶e̶d̶ ̶f̶r̶o̶m̶ ̶2̶5̶0̶ ̶t̶o̶ ̶5̶0̶0̶ ̶k̶b̶/̶s̶ (Done)
 
 -a̶d̶d̶ ̶p̶s̶1̶ ̶l̶i̶b̶r̶a̶r̶y̶  (Done)
 
