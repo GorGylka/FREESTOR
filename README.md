@@ -19,7 +19,7 @@ ___________________________
 ___________________________
 # How to use:
 
-Run [FREESTOR] to download and install pkg. That's it.
+Run FREESTOR, choose game, then press X to download and install pkg. That's it.
 ___________________________
 # Limitations:
 
