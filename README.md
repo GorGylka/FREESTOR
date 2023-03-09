@@ -19,7 +19,7 @@ ___________________________
 ___________________________
 # How to use:
 
-Run [FREESTOR] to choose and download Game, Then run [Game Install] to install downloaded game. That's it.
+Run [FREESTOR] to choose and download and install pkg. That's it.
 ___________________________
 # Limitations:
 
@@ -33,7 +33,7 @@ ___________________________
 ___________________________
 # TO DO List:
 
--wrap two apps into one
+-w̶r̶a̶p̶ ̶t̶w̶o̶ ̶a̶p̶p̶s̶ ̶i̶n̶t̶o̶ ̶o̶n̶e̶  (Done)
 
 -i̶n̶c̶r̶e̶a̶s̶e̶ ̶d̶o̶w̶n̶l̶o̶a̶d̶ ̶s̶p̶e̶e̶d̶ ̶f̶r̶o̶m̶ ̶2̶5̶0̶ ̶t̶o̶ ̶5̶0̶0̶ ̶k̶b̶/̶s̶ (Done)
 
