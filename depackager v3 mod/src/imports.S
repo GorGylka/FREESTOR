@@ -1,0 +1,28 @@
+	.set noreorder
+
+#include "pspstub.s"
+
+	STUB_START	"sceMgr_driver",0x00090000,0x00030005
+	STUB_FUNC	0x2B68BFD5,sceMgrAESInit
+	STUB_FUNC	0x5CEFAF53,sceMgrAESDecrypt
+	STUB_FUNC	0x9E403704,sceMgrAESEncrypt
+	STUB_END
+
+	STUB_START	"sceGe_user",0x40010000,0x00010005
+	STUB_FUNC	0xE47E40E4,sceGeEdramGetAddr
+	STUB_END
+
+	STUB_START	"sceDisplay_driver",0x00010000,0x00010005
+	STUB_FUNC	0xB0942511,sceDisplayWaitVblankStart
+	STUB_END
+
+	STUB_START	"sceAmctrl_driver",0x00010000,0x00040005
+	STUB_FUNC	0x525B8218,sceDrmBBMacInit
+	STUB_FUNC	0x58163FBE,sceDrmBBMacUpdate
+	STUB_FUNC	0xEF95A213,sceDrmBBMacFinal
+	STUB_FUNC	0xF5186D8E,sceDrmBBMacFinal2
+	STUB_END
+
+	STUB_START	"semaphore",0x00010000,0x00010005
+	STUB_FUNC	0x4C537C72,sceUtilsBufferCopyWithRange
+	STUB_END
