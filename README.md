@@ -9,43 +9,43 @@
 
 This app allows download and install PSP .pkg directly via WiFi, without PC. 
 
-# To install FREESTOR:
-___________________________
--copy all files from (releases) to root of your memory card ms0:/
+# Installing
+* copy all files from (releases) to root of your memory card ms0:/
 
--install Npdrm_free plugin on your PSP (https://github.com/lusid1/npdrm_free_mod)
+* install Npdrm_free plugin on your PSP (https://github.com/lusid1/npdrm_free_mod)
 
--to prevent shutdown during download process, disable Auto Sleep (PSP Settings -> Power Save Settings -> Auto Sleep -> off)
-___________________________
-# How to use:
+* to prevent shutdown during download process, disable Auto Sleep (PSP Settings ➡️ Power Save Settings ➡️ Auto Sleep ➡️ off)
+
+# How to use
 
 Run FREESTOR, choose game, then press X to download and install pkg. That's it.
+
+# Limitations
+
+* PSP's Wi-Fi may not support your router's settings. If you can't connect to your home network, change by yourself or ask an admin to change Wi-Fi encryption from WPA2-PSK only to "WPA/WPA2-PSK", "WPA-PSK", WEP or just disable password at all (which is not secure, of course)
+
+* Maximum download speed is about 450-600kb/s due to outdated Wi-Fi module. Downloading and installing a 500MB game takes approximately 35 minutes
+
+* Of course PSP Street is not supported due to the missing Wireless module
+
+# TO DO List
+
+* ~~Wrap two apps into one~~
+
+* ~~increase  download speed from 250 to 500 kb/s~~
+
+* ~~Add PS1 library~~
+
+* Replace one of the system apps (such as Digital Comics) with a Freeshop app
+
+* Test it on PSP Go
 ___________________________
-# Limitations:
-
--PSP Wifi Does not support new Encryption Standarts, so to use it, change Wifi encryption from WPA2-PSK to WPA-PSK , WEP or just disable password in your wifi router settings
-
--Maximum download speed is about ̶2̶0̶0̶-̶3̶0̶0̶k̶b̶/̶s̶  450-600kb/s due to outdated Wifi module. Downloading and installing a 500MB game takes approximately 35 minutes
-
--PSP Street not supported at all
-
--Not tested yet on a PSP Go 
-___________________________
-# TO DO List:
-
--w̶r̶a̶p̶ ̶t̶w̶o̶ ̶a̶p̶p̶s̶ ̶i̶n̶t̶o̶ ̶o̶n̶e̶  (Done)
-
--i̶n̶c̶r̶e̶a̶s̶e̶ ̶d̶o̶w̶n̶l̶o̶a̶d̶ ̶s̶p̶e̶e̶d̶ ̶f̶r̶o̶m̶ ̶2̶5̶0̶ ̶t̶o̶ ̶5̶0̶0̶ ̶k̶b̶/̶s̶ (Done)
-
--a̶d̶d̶ ̶p̶s̶1̶ ̶l̶i̶b̶r̶a̶r̶y̶  (Done)
-
--Replace one of the system apps (such as Digital Comics) with a Freeshop app
-___________________________
-Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
+Tested on PSP 3000 6.61 PROMOD-C2p∞, PSP 2000 6.61 ARK-4
 
 # Support the project with a donation 🤏
 
-USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921 Master Card 5374-9211-6237-9790
+* **USDT**: `0xbcb360031be3fc6a134b95d1bf20ede5da801921`
+* **MasterCard**: `5374 9211 6237 9790`
 
 
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
