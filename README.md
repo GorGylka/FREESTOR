@@ -52,7 +52,7 @@ ___________________________
 
 -PSP Street not supported at all
 
--PSP Go partially support
+-PSone games does not work on PSP Go 
 ___________________________
 # TO DO List:
 
