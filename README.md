@@ -26,9 +26,7 @@ ___________________________
   
      -Reboot your PSP
   
-  -If you have PSP Go without memory card
-
-     -Use this plugin instead: [npdrm_free](https://github.com/qwikrazor87/npdrm_free)
+  -If you have PSP Go without memory card use this plugin instead ----> [npdrm_free](https://github.com/qwikrazor87/npdrm_free)
   
      -Place npdrm_free.prx in ef0:/seplugins folder
   
