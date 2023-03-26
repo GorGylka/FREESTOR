@@ -37,6 +37,8 @@ ___________________________
 </details>
 
 -to prevent shutdown during download process, disable Auto Sleep (PSP Settings -> Power Save Settings -> Auto Sleep -> off)
+
+- (Optional) Set 333/166 clock speed, if you want to speed up unpacking process 
 ___________________________
 # How to use:
 
