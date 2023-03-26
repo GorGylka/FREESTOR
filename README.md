@@ -17,6 +17,7 @@ ___________________________
 
 <details>
   <summary>HOW TO INSTALL npdrm_free_mod Plugin</summary>
+  
   -If you have PSP 1000/2000/3000
   
      -Place npdrm_free_mod.prx in ms0:/seplugins folder
