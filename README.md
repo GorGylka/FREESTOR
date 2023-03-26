@@ -15,6 +15,18 @@ ___________________________
 
 -install Npdrm_free plugin on your PSP (https://github.com/lusid1/npdrm_free_mod)
 
+<details>
+  <summary>HOW TO INSTALL npdrm_free_mod Plugin</summary>
+  -If you have PSP 1000/2000/3000
+     -Place npdrm_free_mod.prx in ms0:/seplugins folder
+     -Add line (without quotes) "ms0:/seplugins/npdrm_free_mod.prx 1" to ms0:/seplugins/vsh.txt AND ms0:/seplugins/vsh.txt
+     -Reboot your PSP
+  -If you have PSP Go without memory card
+     -Place npdrm_free_mod.prx in ef0:/seplugins folder
+     -Add line (without quotes) "ef0:/seplugins/npdrm_free_mod.prx 1" to ef0:/seplugins/vsh.txt AND ef0:/seplugins/vsh.txt
+     -Reboot your PSP
+</details>
+
 -to prevent shutdown during download process, disable Auto Sleep (PSP Settings -> Power Save Settings -> Auto Sleep -> off)
 ___________________________
 # How to use:
