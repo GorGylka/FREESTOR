@@ -16,7 +16,7 @@ ___________________________
 -install Npdrm_free plugin on your PSP (https://github.com/lusid1/npdrm_free_mod)
 
 <details>
-  <summary>HOW TO INSTALL npdrm_free_mod Plugin</summary>
+  <summary>HOW TO INSTALL npdrm_free_mod Plugin (click on me)</summary>
   
   -If you have PSP 1000/2000/3000
   
