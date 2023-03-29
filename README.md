@@ -33,6 +33,27 @@ ___________________________
      -Add line (without quotes) "ef0:/seplugins/npdrm_free.prx 1" to ef0:/seplugins/vsh.txt AND ef0:/seplugins/vsh.txt
   
      -Reboot your PSP
+
+ -Only for PSP go owners, to make PS1 games work (thanks to RazorStrike)
+ 
+      -Download Popsloader (Google it)
+      
+      -The zip has SEPLUGINS folder, with POPS.txt and POPSLOADER inside. Copy POPSLOADER folder into ef0:/seplugins/
+      
+      -Edit the ef0:/seplugins/POPS.txt, add lines 
+      
+      ef0:/seplugins/popsloader/popsloader.prx 1
+      ef0:/seplugins/popsloader/cdda_enabler.prx 1
+      
+      -Restart the console
+      
+      -Start the PS1 game holding R. It should open a menu with all Popsloader firmwares, 
+      you can choose 1 and it will apply and start the game.
+      After that you won't need to do that again, unless the game isn't compatible with the selected firmware,
+      but can be changes the same way by holding R when starting the game.
+      
+      
+
   
 </details>
 
