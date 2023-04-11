@@ -94,4 +94,4 @@ USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
 [img_stars]: https://img.shields.io/github/stars/gorgylka/freestor?color=red&style=for-the-badge&maxAge=3600
 [img_version]: https://img.shields.io/github/v/release/gorgylka/freestor?color=red&label=latest%20release&style=for-the-badge
-[img_photo]: https://github.com/GorGylka/FREESTOR/blob/main/photo.jpg
+[img_photo]: https://github.com/GorGylka/FREESTOR/blob/main/logo.jpg
