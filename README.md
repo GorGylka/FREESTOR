@@ -18,7 +18,7 @@ ___________________________
 <details>
   <summary>HOW TO INSTALL npdrm_free_mod Plugin (click on me)</summary>
   
-  -If you have PSP 1000/2000/3000
+  -If you have PSP 1000/2000/3000 or P͟S͟P͟ G͟O͟ W͟͟͟I͟͟͟T͟͟͟H͟͟͟ M͟e͟m͟o͟r͟y͟ C͟a͟r͟d͟
   
      -Place npdrm_free_mod.prx in ms0:/seplugins folder
   
@@ -26,7 +26,7 @@ ___________________________
   
      -Reboot your PSP
   
-  -If you have PSP Go without memory card use this plugin instead ----> [npdrm_free](https://github.com/qwikrazor87/npdrm_free)
+  -If you have PSP Go WITHOUT memory card use this plugin instead ----> [npdrm_free](https://github.com/qwikrazor87/npdrm_free)
   
      -Place npdrm_free.prx in ef0:/seplugins folder
   
