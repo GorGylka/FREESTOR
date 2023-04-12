@@ -29,13 +29,52 @@ PSP_MODULE_INFO("Download", 0, 1, 1);
 PSP_MAIN_THREAD_ATTR(THREAD_ATTR_USER | THREAD_ATTR_VFPU);
 
 int temp1 = 0;
+long space_free;
 int triangle_pressed = 0;
 int square_pressed = 0;
 int gamecounter = 1;
 int ps1_choose =0;
 char download_url[300];
 char extraline[300];
+char free_space[20];
+char tempstr[10];
 const char* Choose_database = "important_files/All_games_sort_by_Size.tsv";
+
+typedef struct sDevCtl
+{
+  s32 max_clusters;
+  s32 free_clusters;
+  s32 max_sectors;  // ???
+  s32 sector_size;
+  s32 sector_count;
+} sDevCtl;
+
+typedef struct sDevCommand
+{
+  sDevCtl * p_dev_inf;
+} sDevCommand;
+
+
+long
+psp_get_memory_stick_free()
+{
+  sDevCtl     dev_ctl;
+  sDevCommand command;
+
+  command.p_dev_inf = &dev_ctl;
+
+  if ( sceIoDevctl( "ef0:", 0x02425818, &command, sizeof( sDevCommand ), NULL, 0 ) == SCE_KERNEL_ERROR_OK ) {
+    return ((long long)dev_ctl.free_clusters * (long long)dev_ctl.sector_count * (long long)dev_ctl.sector_size) / (1024 * 1024);
+  }
+  return -1;
+}
+
+
+
+
+
+
+
 
 void drawUI()
       {
@@ -44,9 +83,17 @@ void drawUI()
       pspDebugScreenPrintf("____________________________________________________________________");
       pspDebugScreenSetXY(0,32);
       pspDebugScreenPrintf("UP,DOWN=select game  X=install game TRNGL=sort games");
+      pspDebugScreenSetTextColor(0xDDDD00);
+      pspDebugScreenSetXY(54,32);
+      pspDebugScreenPrintf(free_space);
+      pspDebugScreenSetXY(61,32);
+      pspDebugScreenPrintf("MB FREE");
       pspDebugScreenSetXY(0,33);
+      pspDebugScreenSetTextColor(0x00DDDD);
       pspDebugScreenPrintf("L,R=page next/previous []=credits"); 
       pspDebugScreenSetTextColor(0xFFFFFF);
+      pspDebugScreenSetXY(59,33);
+      pspDebugScreenPrintf(tempstr);
       pspDebugScreenSetXY(63,33);
       pspDebugScreenPrintf("/1599"); 
       pspDebugScreenSetTextColor(0x00DDDD);
@@ -101,7 +148,7 @@ void DrawTable() {
       
       int xy = 1;
       FILE* file  = fopen(Choose_database,"r");
-      fgets (download_url, 300, file);
+      fgets (download_url, 300, file); 
 	pspDebugScreenSetXY(0,1);
 	for (int i=0; i < temp1 ;i++) {
       fgets (download_url, 300, file);
@@ -114,7 +161,7 @@ void DrawTable() {
             memcpy(extraline,download_url,pos-download_url);
             pos++;
             pspDebugScreenSetXY(2,xy);
-            extraline[37] = 0; 
+            extraline[40] = 0; 
             pspDebugScreenPrintf(extraline);  //Print PA-TA-TON for example 
             memset(extraline, '\0', sizeof(extraline));
             char* pos1 = strstr(pos,"	"); 
@@ -301,11 +348,11 @@ static void setupGu()
 
 
 int C_downloader()
-{	char download_url[256];
+{	char download_url2[256];
 	FILE* file  = fopen("url.txt","r");
 	//getline(file,download_url);
 	while (!feof(file)) {
-	fgets (download_url, 256, file);
+	fgets (download_url2, 256, file);
 
 	}
 	fclose(file);
@@ -329,22 +376,23 @@ int C_downloader()
 	drawStuff( 0xFF0000CC );
 	ConnectInternet();
 
-	sceKernelDelayThread(400*1000);
+	sceKernelDelayThread(100);
 
 	pspDebugScreenInit();
 	pspDebugScreenClear();
 
-//	int r = sub_0000071C( download_url , "ms0:/PSP/GAME/UPDATE/500.PBP" , NULL );
-	int r = start_download( download_url , "ms0:/pkg/game.pkg" , "PSPUpdate-agent/1.0.0 libhttp/1.0.0" );
+//	int r = sub_0000071C( download_url , "ef0:/PSP/GAME/UPDATE/500.PBP" , NULL );
+	int r = start_download( download_url2 , "ef0:/PSP/GAME/FREESTOR/pkg/game.pkg" , "PSPUpdate-agent/1.0.0 libhttp/1.0.0" );
 //	int r = start_download( download_url , SAVE_PATH , "PSPUpdate-agent/1.0.0 libhttp/1.0.0" );
 	
-	if(r != 0){
+/*	if(r != 0){
 		printf("uFetchFile: Error 0x%08X\n",r);
-
-		sceKernelDelayThread( 0x4C4B40 );
-		sceKernelExitGame();
-		return sceKernelSleepThread();
-	} 
+            //printf("maybe ef0:/pkg folder is missing???");
+ 
+		sceKernelDelayThread( 0x4C4B40 ); 
+		sceKernelExitGame(); 
+		return sceKernelSleepThread(); 
+	} */
 
 
 	struct SceKernelLoadExecVSHParam param;
@@ -356,11 +404,11 @@ int C_downloader()
 
 	memset( &param , 0 , sizeof(param) );
 	param.size= sizeof(param);
-	param.args= sizeof("ms0:/PSP/GAME/FREESTOR/DEPACKAGER/EBOOT.PBP");
-	param.argp="ms0:/PSP/GAME/FREESTOR/DEPACKAGER/EBOOT.PBP";
+	param.args= sizeof("ef0:/PSP/GAME/FREESTOR/DEPACKAGER/EBOOT.PBP");
+	param.argp="ef0:/PSP/GAME/FREESTOR/DEPACKAGER/EBOOT.PBP";
 	param.key="game";
 
-	sctrlKernelLoadExecVSHMs1( "ms0:/PSP/GAME/FREESTOR/DEPACKAGER/EBOOT.PBP" ,&param);
+	sctrlKernelLoadExecVSHMs1( "ef0:/PSP/GAME/FREESTOR/DEPACKAGER/EBOOT.PBP" ,&param);
 	sceKernelExitGame();
 	return 0;
 }
@@ -389,6 +437,7 @@ int SetupCallbacks(void) {
 
 
 int main() { //In C++ `auto main() -> int` is also valid.
+      scePowerSetClockFrequency(333, 333, 166);
 	SetupCallbacks();
 	pspDebugScreenInit();
 
@@ -400,9 +449,21 @@ int main() { //In C++ `auto main() -> int` is also valid.
       struct SceCtrlLatch latchData;
       int choosegame = 8;
       int i;
-      char tempstr[10];
+      
+      space_free  = psp_get_memory_stick_free();
+      //space_free /= 1024 * 1024;
+      //space_free = 4096 + space_free;
+      sprintf(free_space, "%li", space_free);
       DrawTable();
       drawUI();
+      
+      //free_space = space_free;
+      
+      //FILE* file3  = fopen("testing.txt","w");
+         //   fputs(free_space , file3 );
+           // fclose(file3);
+
+
       while (1)
             {
             sceCtrlReadBufferPositive(&ctrlData, 1);
@@ -538,9 +599,9 @@ int main() { //In C++ `auto main() -> int` is also valid.
             pspDebugScreenSetXY(3,11);
             pspDebugScreenPrintf("-Miscellaneous (PC Engine,NeoGeo)");
             pspDebugScreenSetXY(3,12);
-            pspDebugScreenPrintf("-PSone Games sort by NAME (A..Z)");
+            pspDebugScreenPrintf("-PS1 Games sort by NAME (A..Z)");
             pspDebugScreenSetXY(3,13);
-            pspDebugScreenPrintf("-PSone Games sort by SIZE (1..999mb)");
+            pspDebugScreenPrintf("-PS1 Games sort by SIZE (1..999mb)");
 
             }
 
@@ -548,6 +609,7 @@ int main() { //In C++ `auto main() -> int` is also valid.
 
             if (latchData.uiMake & PSP_CTRL_CROSS)   {
             if (triangle_pressed == 0 && square_pressed == 0) {
+            
             temp1 = gamecounter;
             pspDebugScreenInit();
             FILE* file  = fopen(Choose_database,"r");
@@ -556,21 +618,89 @@ int main() { //In C++ `auto main() -> int` is also valid.
             for (int i=0; i < temp1 ;i++) {
             memset(download_url, '\0', sizeof(download_url));
             fgets (download_url, 300, file);}
-            pspDebugScreenPrintf(download_url);
-            char* pos3 = strstr(download_url,"http"); 
-            //memcpy(extraline,download_url,pos3-download_url);
+            //pspDebugScreenPrintf(download_url);
             
-            char* pos2 = strstr(pos3,"pkg"); 
+            char* pos3 = strstr(download_url,"http");
+           char download_urltwo[300];
+            strncpy(download_urltwo, download_url, 300);
+             
+            char* gamesize = strstr(download_urltwo,".pkg	");
+
+
+
+            char* pos2 = strstr(pos3,"pkg");  
             memcpy(extraline,pos3,pos2-pos3);
             fclose(file);
-
+           // memset(extraline, '\0', sizeof(extraline));
 
             FILE* file2  = fopen("url.txt","w");
-            fputs(extraline , file2 );
-            fputs("pkg" , file2 );
-            fclose(file2);
+           
 
-            C_downloader();
+
+
+            char* link_end = strstr(extraline,"XXXX");
+           
+            memset(download_url, '\0', sizeof(download_url));
+            memcpy(download_url,extraline,link_end-extraline);
+
+            link_end=link_end+4;
+            /*
+            pspDebugScreenPrintf(download_url);
+            pspDebugScreenPrintf(".dl.p");
+            pspDebugScreenPrintf("lays");
+            pspDebugScreenPrintf("tati");
+            pspDebugScreenPrintf("on.net/cdn/");
+            pspDebugScreenPrintf(link_end);
+            pspDebugScreenPrintf("pkg");
+            */
+
+
+
+
+
+            fputs(download_url , file2 );
+            fputs(".dl.p" , file2 );
+            fputs("lays" , file2 );
+            fputs("tati" , file2 );
+            fputs("on.net/cdn/" , file2 );
+            fputs(link_end , file2 );
+            fputs("pkg" , file2 );
+
+
+
+            fclose(file2);
+            gamesize[strlen(gamesize)-2] = '\0';
+            gamesize= gamesize+5;
+            int gamesizeint = atoi(gamesize);
+            //pspDebugScreenPrintf(gamesize);
+            //pspDebugScreenPrintf("hello!!!");
+            
+            gamesizeint = (space_free - (gamesizeint + gamesizeint));
+            if (gamesizeint < 0) {
+            pspDebugScreenSetTextColor(0x0000CC);
+            pspDebugScreenPrintf("\n NOT ENOUGH SPACE ON THE MEMORY CARD! PLEASE FREE (");
+            pspDebugScreenPrintf(gamesize);
+            pspDebugScreenPrintf(" + ");
+            pspDebugScreenPrintf(gamesize);
+            pspDebugScreenPrintf(") MB");
+            pspDebugScreenSetTextColor(0xFFFFFF);
+            pspDebugScreenPrintf("\n \n PRESS START TO CONTINUE");
+            triangle_pressed = 1;
+
+
+            //FILE* file5  = fopen("url.txt","w");
+            //fputs(gamesizeint , file5 );
+            //fclose(file5);
+
+            }
+
+            if (gamesizeint > 0) {
+            //int gamesizeint = atoi(gamesize);
+            //if (gamesizeint > 300) {
+            //gamesizeint = (gamesizeint * 4.6)
+            //}      
+            C_downloader(); 
+            }
             }
             } 
 
@@ -623,7 +753,7 @@ int main() { //In C++ `auto main() -> int` is also valid.
             //drawUI();
             pspDebugScreenSetTextColor(0x33FF33);
             pspDebugScreenSetXY(0,0);
-            pspDebugScreenPrintf(" FREESTOR v0.011\n");
+            pspDebugScreenPrintf(" FREESTOR v0.012\n");
             pspDebugScreenPrintf(" made by GorGylka, huge thanks to XProger, RealYoti\n");
             pspDebugScreenSetXY(20,28);
             pspDebugScreenPrintf("Press (START) to main menu");
