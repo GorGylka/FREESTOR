@@ -61,7 +61,7 @@ ___________________________
 
 -to prevent shutdown during download process, disable Auto Sleep (PSP Settings -> Power Save Settings -> Auto Sleep -> off)
 
-- (Optional) Power Save Settings -> WLAN Power save -> OFF , if you want to speed up downloading process (25% increase)
+- (Optional) Set Power Save Settings -> WLAN Power save -> OFF , if you want to speed up downloading process (15% increase)
 
 - (Optional) Set 333/166 clock speed, if you want to speed up installing process (20% increase)
 ___________________________
