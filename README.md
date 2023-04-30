@@ -17,6 +17,8 @@ ___________________________
 
 -install Npdrm_free plugin on your PSP (https://github.com/lusid1/npdrm_free_mod)
 
+(if you install npdrm_free_mod, and get 80010087 error, try this plugin instead (https://github.com/qwikrazor87/npdrm_free) )
+
 <details>
   <summary>HOW TO INSTALL npdrm_free_mod Plugin (click on me)</summary>
   
