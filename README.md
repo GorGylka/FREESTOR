@@ -73,9 +73,19 @@ Run FREESTOR, choose game, then press X to download and install pkg. That's it.
 ___________________________
 # Limitations:
 
--PSP Wifi Does not support new Encryption Standarts, so to use it, change Wifi encryption from WPA2-PSK to WPA-PSK , WEP or just disable password in your wifi router settings
+-PSP Wifi Does not support new Encryption Standarts, so to use it, change Wifi encryption from WPA2-PSK to WPA-PSK , WEP or just disable password in your wifi router settings. If you change the protection from WPA2-PSK to WPA-PSK and keep the same password, you will be able to connect your PSP and you wont need to pair already connected devices.
 
--Maximum download speed is about ̶2̶0̶0̶-̶3̶0̶0̶k̶b̶/̶s̶  450-600kb/s due to outdated Wifi module. Downloading and installing a 500MB game takes approximately 35 minutes
+-Maximum download speed is about ̶2̶0̶0̶-̶3̶0̶0̶k̶b̶/̶s̶  450-600kb/s due to outdated Wifi module. 
+
+| File Size | Downloading & Installation time |
+| --- | --- |
+| 100 MB | ≈ 7 min. |
+| 200 MB | ≈ 15 min. |
+| 500 MB | ≈ 35 min. |
+| 1000 MB | ≈ 1 hour |
+| 1500 MB | ≈ 1 hour, 30 min. |
+
+ In view of the fact that most have old, weak batteries, I highly recommend installing games with the charger connected.
 
 -FreeStor conflicts with Autostart.prx and category_lite.prx plugins. turn it off, if you use FreeStor
 
