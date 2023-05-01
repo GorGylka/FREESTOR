@@ -77,6 +77,8 @@ ___________________________
 
 -Maximum download speed is about ̶2̶0̶0̶-̶3̶0̶0̶k̶b̶/̶s̶  450-600kb/s due to outdated Wifi module. Downloading and installing a 500MB game takes approximately 35 minutes
 
+-FreeStor conflicts with Autostart.prx and category_lite.prx plugins. turn it off, if you use FreeStor
+
 -PSP Street not supported at all
 
 ___________________________
