@@ -100,7 +100,39 @@ ___________________________
 
 -a̶d̶d̶ ̶p̶s̶1̶ ̶l̶i̶b̶r̶a̶r̶y̶  (Done)
 
--Replace one of the system apps (such as Digital Comics) with a Freeshop app
+-Replace one of the system apps (such as PSN) with a Freeshop app
+
+<details>
+  <summary> [ it is possible, but require 6.60 downgrade to 6.60, how to (click on me) ] </summary> 
+  
+    -Downgrade PSP to 6.60
+ 
+    -Install any CFW (ark-4, Pro-C, e.t.c.)
+  
+    -Install XMB_Icon_Manager Plugin
+  
+    -Edit lines in xmbim_config.txt
+  
+    SIGN_UP = "FREESTOR"
+  
+    SIGN_UP_MODE = "game"
+  
+    SIGN_UP_FILE = "ms0:/PSP/GAME/FREESTOR/EBOOT.PBP"
+
+    PLAYSTATION_STORE = "FREESTOR"
+  
+    PLAYSTATION_STORE_MODE = "game"
+  
+    PLAYSTATION_STORE_FILE = "ms0:/PSP/GAME/FREESTOR/EBOOT.PBP"
+
+    INFORMATION_BOARD = "FREESTOR"
+  
+    INFORMATION_BOARD_MODE = "game"
+  
+    INFORMATION_BOARD_FILE = "ms0:/PSP/GAME/FREESTOR/EBOOT.PBP"
+  
+  </details>
+  
 ___________________________
 Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
 
