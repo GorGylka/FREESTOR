@@ -100,7 +100,7 @@ ___________________________
 
 -a̶d̶d̶ ̶p̶s̶1̶ ̶l̶i̶b̶r̶a̶r̶y̶  (Done)
 
--Replace one of the system apps (such as PSN) with a Freeshop app
+-Replace one of the system apps (such as PSN) with a Freeshop app (Done?)
 
 <details>
   <summary> [ it is possible, but require  downgrade to 6.60, how to (click on me) ] 
