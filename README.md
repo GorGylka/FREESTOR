@@ -103,7 +103,11 @@ ___________________________
 -Replace one of the system apps (such as PSN) with a Freeshop app
 
 <details>
-  <summary> [ it is possible, but require 6.60 downgrade to 6.60, how to (click on me) ] </summary> 
+  <summary> [ it is possible, but require  downgrade to 6.60, how to (click on me) ] 
+  
+  ![pic_0010]
+  
+  </summary> 
   
     -Downgrade PSP to 6.60
  
@@ -145,3 +149,4 @@ USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921
 [img_stars]: https://img.shields.io/github/stars/gorgylka/freestor?color=red&style=for-the-badge&maxAge=3600
 [img_version]: https://img.shields.io/github/v/release/gorgylka/freestor?color=red&label=latest%20release&style=for-the-badge
 [img_photo]: https://github.com/GorGylka/FREESTOR/blob/main/logo1.png
+[pic_0010]: https://github.com/GorGylka/FREESTOR/blob/main/pic_0010.jpg
