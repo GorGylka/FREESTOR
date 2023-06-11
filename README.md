@@ -144,7 +144,7 @@ Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
 
 USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921 
 
-Any donation above $5 - your nickname gets into the Credits list in future releases
+Any donation - your nickname gets into the Credits list in future releases
 
 Сontact me for your username
 
