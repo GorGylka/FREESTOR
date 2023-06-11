@@ -146,6 +146,8 @@ USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921
 
 Any donation above $5 - your nickname gets into the Credits list
 
+Сontact me for your username
+
 ![img_support]
 
 [img_support]: https://github.com/GorGylka/FREESTOR/blob/main/support.jpg
