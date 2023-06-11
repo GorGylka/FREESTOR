@@ -144,7 +144,11 @@ Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
 
 USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921 
 
+Any donation above $5 - your nickname gets into the Credits list
 
+[!img_support]
+
+[img_support]: https://github.com/GorGylka/FREESTOR/blob/main/support.jpg
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
 [img_stars]: https://img.shields.io/github/stars/gorgylka/freestor?color=red&style=for-the-badge&maxAge=3600
 [img_version]: https://img.shields.io/github/v/release/gorgylka/freestor?color=red&label=latest%20release&style=for-the-badge
