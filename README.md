@@ -26,7 +26,7 @@ ___________________________
   
      -Place npdrm_free_mod.prx in ms0:/seplugins folder
   
-     -Add line (without quotes) "ms0:/seplugins/npdrm_free_mod.prx 1" to ms0:/seplugins/vsh.txt AND ms0:/seplugins/vsh.txt
+     -Add line (without quotes) "ms0:/seplugins/npdrm_free_mod.prx 1" to ms0:/seplugins/vsh.txt AND ms0:/seplugins/game.txt
   
      -Reboot your PSP
   
@@ -34,7 +34,7 @@ ___________________________
   
      -Place npdrm_free.prx in ef0:/seplugins folder
   
-     -Add line (without quotes) "ef0:/seplugins/npdrm_free.prx 1" to ef0:/seplugins/vsh.txt AND ef0:/seplugins/vsh.txt
+     -Add line (without quotes) "ef0:/seplugins/npdrm_free.prx 1" to ef0:/seplugins/vsh.txt AND ef0:/seplugins/game.txt
   
      -Reboot your PSP
 
