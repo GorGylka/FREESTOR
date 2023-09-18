@@ -66,6 +66,10 @@ ___________________________
 - (Optional) Set Power Save Settings -> WLAN Power save -> OFF , if you want to speed up downloading process (15% increase)
 
 - (Optional) Set 333/166 clock speed, if you want to speed up installing process (20% increase)
+
+- (Optional) Set Memory Stick Speedup  (5% increase)
+- (PRO-C: Recovery -> Advanced -> Memory Stick Speedup -> Enabled)
+- (ARK-4: Custom Firmware Settings ->  Memory Stick Speedup  -> Always)
 ___________________________
 # How to use:
 
