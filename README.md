@@ -68,8 +68,8 @@ ___________________________
 - (Optional) Set 333/166 clock speed, if you want to speed up installing process (20% increase)
 
 - (Optional) Set Memory Stick Speedup  (5% increase)
-- (PRO-C: Recovery -> Advanced -> Memory Stick Speedup -> Enabled)
-- (ARK-4: Custom Firmware Settings ->  Memory Stick Speedup  -> Always)
+(PRO-C: Recovery -> Advanced -> Memory Stick Speedup -> Enabled)
+(ARK-4: Custom Firmware Settings ->  Memory Stick Speedup  -> Always)
 ___________________________
 # How to use:
 
