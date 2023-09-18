@@ -69,7 +69,9 @@ ___________________________
 
 - (Optional) Set Memory Stick Speedup  (5% increase)
   
+  
 (PRO-C: Recovery -> Advanced -> Memory Stick Speedup -> Enabled)
+
 
 (ARK-4: Custom Firmware Settings ->  Memory Stick Speedup  -> Always)
 ___________________________
