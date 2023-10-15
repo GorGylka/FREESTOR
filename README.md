@@ -5,7 +5,7 @@
 
 ![img_photo]
 
-
+**the program is no longer updated. Use [PKGi](https://github.com/bucanero/pkgi-psp), it's faster and better.**
 
 This app allows download and install PSP .pkg directly via WiFi, without PC. 
 
