@@ -151,9 +151,6 @@ ___________________________
 ___________________________
 Tested on PSP 3000 6.61 PROMOD-C2p∞ , PSP 2000 6.61 ARK-4
 
-# Support the project with a donation 🤏
-
-USDT  0xbcb360031be3fc6a134b95d1bf20ede5da801921 
 
 
 [img_downloads]: https://img.shields.io/github/downloads/GorGylka/FREESTOR/total.svg?color=red&style=for-the-badge&maxAge=3600
