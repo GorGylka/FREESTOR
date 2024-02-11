@@ -81,6 +81,10 @@ ___________________________
 # How to use:
 
 Run FREESTOR, choose game, then press X to download and install pkg. That's it.
+X - install game
+R - Next page
+L - Prev page
+Triangle - Change sort method
 ___________________________
 # Limitations:
 
