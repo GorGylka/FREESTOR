@@ -3,7 +3,7 @@
 ![img_version]   ![img_downloads]   ![img_stars]
 
 
-**the program is no longer updated. Use [PKGi](http://psp.rf.gd), it's faster and better.**
+**the program is no longer updated. Use [PKGi PSP Browser Installer](http://psp.rf.gd), it's faster and better.**
 
 
 ![img_photo]
